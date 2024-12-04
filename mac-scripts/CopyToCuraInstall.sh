@@ -10,6 +10,11 @@ fi
 # make sure to change this to match your Cura version
 CURA_PATH="$HOME/Library/Application Support/cura/$CURA_VERSION"
 
+if [ ! -d "$CURA_PATH" ]; then
+    echo "$CURA_PATH does not exist"
+    exit 1
+fi
+
 mkdir -p "$CURA_PATH/materials"
 mkdir -p "$CURA_PATH/definitions"
 mkdir -p "$CURA_PATH/extruders"
