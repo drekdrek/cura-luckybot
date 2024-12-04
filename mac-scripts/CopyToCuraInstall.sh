@@ -2,6 +2,13 @@
 # make sure to change this to match your Cura version
 CURA_PATH="$HOME/Library/Application Support/cura/5.8"
 
+mkdir -p "$CURA_PATH/materials"
+mkdir -p "$CURA_PATH/definitions"
+mkdir -p "$CURA_PATH/extruders"
+mkdir -p "$CURA_PATH/meshes"
+mkdir -p "$CURA_PATH/quality/creality/base"
+mkdir -p "$CURA_PATH/variants"
+
 
 cp ../cura5.x/share/resources/materials/chocolate.xml.fdm_material "$CURA_PATH/materials/chocolate.xml.fdm_material"
 cp ../cura5.x/share/resources/definitions/creality_ender3pro_luckybot.def.json "$CURA_PATH/definitions/creality_ender3pro_luckybot.def.json"
