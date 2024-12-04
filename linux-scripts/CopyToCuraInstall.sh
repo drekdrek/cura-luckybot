@@ -1,6 +1,15 @@
 #!/bin/bash
+
+if [ -z "$1" ]
+then
+    CURA_VERSION="5.8"
+else
+    CURA_VERSION="$1"
+fi
+
 # make sure to change this to match your Cura version
-CURA_PATH="$HOME/.local/share/cura/5.8"
+CURA_PATH="$HOME/Library/Application Support/cura/$CURA_VERSION"
+
 cp ../cura5.x/share/resources/materials/chocolate.xml.fdm_material "$CURA_PATH/materials/chocolate.xml.fdm_material"
 cp ../cura5.x/share/resources/definitions/creality_ender3pro_luckybot.def.json "$CURA_PATH/definitions/creality_ender3pro_luckybot.def.json"
 cp ../cura5.x/share/resources/extruders/creality_base_extruder_0_luckybot.def.json "$CURA_PATH/extruders/creality_base_extruder_0_luckybot.def.json"

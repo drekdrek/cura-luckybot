@@ -1,6 +1,14 @@
 #!/bin/bash
+
+if [ -z "$1" ]
+then
+    CURA_VERSION="5.8"
+else
+    CURA_VERSION="$1"
+fi
+
 # make sure to change this to match your Cura version
-CURA_PATH="$HOME/Library/Application Support/cura/5.8"
+CURA_PATH="$HOME/Library/Application Support/cura/$CURA_VERSION"
 
 mkdir -p "$CURA_PATH/materials"
 mkdir -p "$CURA_PATH/definitions"
